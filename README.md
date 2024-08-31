@@ -47,7 +47,7 @@ This will allow you to complete the Setup process and to run .TE files.
 
 ___
 
-- [To Learn TE](https://github.com/SureshS03/TE_Programming_Language/blob/main/Doc/Learn)
+- [To Learn TE](https://github.com/SureshS03/TE_Programming_Language/blob/main/docs/Learn.md)
 
 
 **Contributions are welcome!** Please fork this repository and submit a pull request with your changes.
