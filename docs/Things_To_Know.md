@@ -1,0 +1,1 @@
+- **In TE** , it's always check the first word and start it's execution.

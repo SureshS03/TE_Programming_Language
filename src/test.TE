@@ -1,0 +1,13 @@
+en x = 69;
+sollu x;
+eluthu y = 'suresh';
+sollu y;
+kelu en num 'ENTER ANY NUM :-';
+sollu num;
+kelu z 'Name enna pa :-';
+sollu z;
+sollu 'BROO';
+en a = 5;
+en b = 10;
+en add = a - b;
+sollu add;
