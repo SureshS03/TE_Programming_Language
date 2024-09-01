@@ -12,4 +12,4 @@ fi
 
 chmod +x /usr/local/bin/TE 2>/dev/null || chmod +x /usr/bin/TE
 
-echo "TE has been installed successfully. You can now use it by typing 'TE filename.TE' in the terminal."
+echo "TE has been installed successfully."
