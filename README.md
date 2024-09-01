@@ -16,7 +16,7 @@ This is how TE works, and it’s as simple as it is effective. While TE might se
 
 ## Setup Instructions
 **Prerequisites:-**
-- Python
+- Python or Python3
 - Tamil Language **( Not Necessary )**
 - **Fun Mind**
   
@@ -26,17 +26,29 @@ Clone or Download the [Repo](https://github.com/SureshS03/TE_Programming_Languag
 
     git clone https://github.com/SureshS03/TE_Programming_Language.git
 
+### For Windows :- ###
+
 Run the Setup Script as **Administrator**:
 
     setup.bat
 
-This will allow you to complete the Setup process and to run .TE files.
 
 > ***Warning:*** Windows Security might notify you that this is an unauthorized file. Do you want to run it? To proceed, click **Show more** and then click **Run anyway**
 
-> ***NOTE :-*** The `Setup.bat` file provided is a fully open-source script designed to facilitate the setup process for project. **It contains no malicious code or hidden functionality.** You are encouraged to review the script's source code to verify its integrity and ensure it meets your requirements.
+
+### For Linux :- ###
+
+Run the Setup Script with sudo
+
+    chmod +x Setup.sh
+    sudo ./Setup.sh
+
+This will allow you to complete the Setup process and to run .TE files.
+
+> ***NOTE :-*** The `Setup.bat` and `Setup.sh` files provided is a fully open-source script designed to facilitate the setup process for project. **It contains no malicious code or hidden functionality.** You are encouraged to review the script's source code to verify its integrity and ensure it meets your requirements.
 >
 > TE committed to transparency and security. If you have any questions or concerns about the script, please feel free to reach out.
+
 
 ## How to Use TE?
 
