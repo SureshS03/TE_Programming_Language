@@ -28,8 +28,9 @@ class Translater(object):
             if e == KeyboardInterrupt:
                 print("Program Interrupted")
                 os.remove("py_src_code.py")
-            print(f"Error in the code , {e}")
-            os.remove("py_src_code.py")
+            else:
+                print(f"Error in the code , {e}")
+                os.remove("py_src_code.py")
 
             
     def DataType_trans(self, code):
