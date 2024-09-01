@@ -83,13 +83,11 @@ class Parser(object):
                 exit()
             try:
                 if token_data[2][0] != "String" and token_data[2][0] != "Variable":
-                    print("here")
                     print("ERROR :- Invalid Syntax " + token_data[2][1])
                     exit()
             except:
                 pass
             if len(token_data) > 4:
-                print("here is")
                 print("ERROR :- Invalid Code At Last")
                 exit()
     

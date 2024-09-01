@@ -23,16 +23,16 @@ class Translater(object):
 
         try:
             exec(codes)
+        except KeyboardInterrupt:
+            print("\nProgram Interrupted")
             os.remove("py_src_code.py")
         except Exception as e:
-            if e == KeyboardInterrupt:
-                print("Program Interrupted")
-                os.remove("py_src_code.py")
-            else:
-                print(f"Error in the code , {e}")
-                os.remove("py_src_code.py")
+            print(f"Error in the code, {e}")
+            os.remove("py_src_code.py")
+        finally:
+            os.remove("py_src_code.py")
 
-            
+
     def DataType_trans(self, code):
 
         if code[0][1] == "en":

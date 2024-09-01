@@ -26,7 +26,7 @@ def main():
 
 
     try:
-        #print(filename)
+        
         with open(filename, 'r') as file:
 
             # reading the file (test.TE)
@@ -43,10 +43,8 @@ def main():
 
         ts = translater.Translater(asset)
         trans = ts.Spliter()
-    
-    except FileNotFoundError:
-        print("Here")
-        print(f"Error: File '{filename}' not found.")
+
+    except Exception as e:
         sys.exit(1)
 
 if __name__ == '__main__':

@@ -46,5 +46,4 @@ class Lexer(object):
 
             index += 1
 
-        #print(token)
         return token
