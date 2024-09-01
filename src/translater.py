@@ -25,6 +25,9 @@ class Translater(object):
             exec(codes)
             os.remove("py_src_code.py")
         except Exception as e:
+            if e == KeyboardInterrupt:
+                print("Program Interrupted")
+                os.remove("py_src_code.py")
             print(f"Error in the code , {e}")
             os.remove("py_src_code.py")
 
