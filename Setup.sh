@@ -9,4 +9,4 @@ echo "python3 '$SCRIPT_DIR/src/main.py' \"\$@\"" >> /usr/local/bin/TE
 
 chmod +x /usr/local/bin/TE
 
-echo "TE command is now set up. You can use it by typing: TE filename.TE"
+echo "TE command is now set up."
