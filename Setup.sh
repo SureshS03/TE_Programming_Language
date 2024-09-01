@@ -1,15 +1,12 @@
+#!/bin/bash
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/src" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-if [ -w /usr/local/bin ]; then
-    ln -sf "$SCRIPT_DIR/main.py" /usr/local/bin/TE
-elif [ -w /usr/bin ]; then
-    ln -sf "$SCRIPT_DIR/main.py" /usr/bin/TE
-else
-    echo "ERROR: You need root permissions to install TE. Please run the script with sudo."
-    exit 1
-fi
+cd "$SCRIPT_DIR/src" || { echo "src directory not found"; exit 1; }
 
-chmod +x /usr/local/bin/TE 2>/dev/null || chmod +x /usr/bin/TE
+echo '#!/bin/bash' > /usr/local/bin/TE
+echo "python3 '$SCRIPT_DIR/src/main.py' \"\$@\"" >> /usr/local/bin/TE
 
-echo "TE has been installed successfully."
+chmod +x /usr/local/bin/TE
+
+echo "TE command is now set up. You can use it by typing: TE filename.TE"
