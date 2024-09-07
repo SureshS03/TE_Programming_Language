@@ -27,13 +27,12 @@ class Translater(object):
             exec(codes)
         except KeyboardInterrupt:
             print("\nProgram Interrupted")
-            #os.remove("py_src_code.py")
+            os.remove("py_src_code.py")
         except Exception as e:
             print(f"Error in the code, {e}")
-            #os.remove("py_src_code.py")
+            os.remove("py_src_code.py")
         finally:
-            pass
-            #os.remove("py_src_code.py")
+            os.remove("py_src_code.py")
 
 
     def DataType_trans(self, code):
@@ -57,7 +56,7 @@ class Translater(object):
                     self.file_write(self.String)
                     self.String = ""
                 elif code[4][0] == "Variable":
-                    
+
                     #print('im varibale')
                     self.String += code[1][1] + code[2][1] + output
                     self.file_write(self.String)
