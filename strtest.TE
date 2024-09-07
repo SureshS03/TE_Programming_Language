@@ -1,0 +1,4 @@
+eluthu x = 'suresh';
+eluthu y = 'arya';
+eluthu z = x + y;
+sollu z;

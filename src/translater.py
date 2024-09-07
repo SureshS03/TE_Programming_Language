@@ -1,4 +1,6 @@
 import os
+import function as func
+
 class Translater(object):
 
     def __init__(self, token):
@@ -25,15 +27,17 @@ class Translater(object):
             exec(codes)
         except KeyboardInterrupt:
             print("\nProgram Interrupted")
-            os.remove("py_src_code.py")
+            #os.remove("py_src_code.py")
         except Exception as e:
             print(f"Error in the code, {e}")
-            os.remove("py_src_code.py")
+            #os.remove("py_src_code.py")
         finally:
-            os.remove("py_src_code.py")
+            pass
+            #os.remove("py_src_code.py")
 
 
     def DataType_trans(self, code):
+        #print(code)
 
         if code[0][1] == "en":
             
@@ -43,9 +47,25 @@ class Translater(object):
             self.file_write(self.String)
             self.String = ""
         elif code[0][1] == "eluthu":
-            self.String += code[1][1] + code[2][1] + "'"+code[3][1]+"'"
-            self.file_write(self.String)
-            self.String = ""
+            if code[3][0] == "Function":
+                func_var = func.Functions(code)
+                output = func_var.Func_checker(code)
+
+                if code[4][0] == "String":
+                    #print('im string')
+                    self.String += code[1][1] + code[2][1] + "'" + output + "'"
+                    self.file_write(self.String)
+                    self.String = ""
+                elif code[4][0] == "Variable":
+                    
+                    #print('im varibale')
+                    self.String += code[1][1] + code[2][1] + output
+                    self.file_write(self.String)
+                    self.String = ""
+            else:    
+                self.String += code[1][1] + code[2][1] + "'"+code[3][1]+"'"
+                self.file_write(self.String)
+                self.String = ""
             
 
     def Syntax_trans(self, code):

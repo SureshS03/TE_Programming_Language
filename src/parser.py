@@ -22,11 +22,14 @@ class Parser(object):
         return result
                         
     def line_checker(self, code):
+        #print(code)
         token_format = code[0][0]
         if token_format == "DataType":
             self.syntax_checker_DataType(code)
         elif token_format == "Syntax":
             self.syntax_checker_syntax(code)
+        #elif token_format == "Function":
+        #    self.syntax_checker_Function(code)
         else :
             print("ERROR Invalid Code At Front")
 
@@ -43,6 +46,7 @@ class Parser(object):
 
 
         elif token_data[0][0] == "DataType" and token_data[0][1] == "eluthu":
+            #print(token_data)
 
             if token_data[1][0] != "Variable":
                 print("ERROR :- Invalid Data Variable -->" + token_data[1][1])
@@ -50,10 +54,10 @@ class Parser(object):
             elif token_data[2][0] != "Operator" or token_data[2][1] != "=":
                 print("ERROR :- Invalid Operation -->" + token_data[2][1])
                 exit()
-            elif token_data[3][0] != "String":
-                print("ERROR :- Invalid Data Value -->" + token_data[3][1] +", (eluthu only use String)" )
+            elif token_data[3][0] != "String" and token_data[3][0] != "Function":
+                print("ERROR :- Invalid Data Value -->" + token_data[3][1] +", (eluthu only use String or Function)" )
                 exit()
-            if len(token_data) > 4:
+            if len(token_data) > 5:
                 print("ERROR :- Invalid Code At Last")
                 exit()
                     
@@ -91,3 +95,20 @@ class Parser(object):
                 print("ERROR :- Invalid Code At Last")
                 exit()
     
+    def syntax_checker_Function(self, token_data):
+        print(token_data)
+
+        if token_data[0][0] == "Function" and token_data[0][1] == "iṭamarru":
+
+            if token_data[1][0] != "Variable":
+                print("ERROR :- Invalid Function Variable -->" + token_data[1][1])
+                exit()
+            elif token_data[2][0] != "Operator" or token_data[2][1] != "=":
+                print("ERROR :- Invalid Operation -->" + token_data[2][1])
+                exit()
+            elif token_data[3][0] != "Variable":
+                print("ERROR :- Invalid Function Value -->" + token_data[3][1])
+                exit()
+            if len(token_data) > 4:
+                print("ERROR :- Invalid Code At Last")
+                exit()

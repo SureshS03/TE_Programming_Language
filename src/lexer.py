@@ -44,6 +44,8 @@ class Lexer(object):
             elif words == ';':
                 token.append(['EndOfStatement', words])
 
+            elif words == 'matti_podu':
+                token.append(['Function', words])
             index += 1
-
+            
         return token
