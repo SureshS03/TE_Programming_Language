@@ -1,7 +1,12 @@
 ## Data Type
 
 - en (Int)
+  
+  ```en x = 69```
+  
 - eluthu (String)
+  
+  ```eluthu x = 'Suresh'```
 
 ## Print
 
@@ -24,6 +29,9 @@ This is for print a variable
 ```kelu x;```
 
 ```kelu x 'Give any Input';```
+
+```kelu en num 'Enter any number :- ```
+This will get the input and store it as en (Int)
 
 ## Arithmetic Operations
 
